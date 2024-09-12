@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "lib-c"
+version = "0.1.0"
+description = "Package 'c' with a shared namespace (ns)"
+authors = ["Florian Kluibenschadl <fkluibenschaedl@rti.org>"]
+readme = "README.md"
+
+packages = [
+    { include = "spc", from = "src/nstst", to="nstst" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+lib-a = {path = "../lib_a/dist/lib_a-0.1.0-py3-none-any.whl"}
+lib-b = {path = "../lib_b/dist/lib_b-0.1.0-py3-none-any.whl"}
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "lib-a"
+version = "0.1.0"
+description = "Package 'a' with a shared namespace (ns)"
+authors = ["Florian Kluibenschadl <fkluibenschaedl@rti.org>"]
+readme = "README.md"
+
+packages = [
+    { include = "spa", from = "src/nstst", to="nstst" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
