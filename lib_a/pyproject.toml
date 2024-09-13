@@ -6,7 +6,7 @@ authors = ["Florian Kluibenschadl <fkluibenschaedl@rti.org>"]
 readme = "README.md"
 
 packages = [
-    { include = "spa", from = "src/nstst", to="nstst" }
+    { include = "nstst", from = "src" }
 ]
 
 [tool.poetry.dependencies]
